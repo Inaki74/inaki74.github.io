@@ -28,7 +28,7 @@
 
       createUnityInstance(document.querySelector("#unity-canvas"), {
         arguments: [],
-        dataUrl: "Build/9265f8640c23f97918e07138d67777cf.data",
+        dataUrl: "Build/c7df048dd7feb0e71ebe7d95e9a538c1.data",
         frameworkUrl: "Build/9ab7d51d6b1752f300422bcd359bf105.framework.js",
         codeUrl: "Build/ba3eedc7ba28e86d2a846f846e751384.wasm",
         streamingAssetsUrl: "StreamingAssets",
@@ -38,6 +38,7 @@
         // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
         // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
       }).then((unityInstance) => {
+        window.unityInstance = unityInstance;
       }).catch((message) => {
         alert(message);
       });
