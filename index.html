@@ -56,7 +56,7 @@
       var loaderUrl = buildUrl + "/c8631858a7b048bbd7b92196cd5c3946.loader.js";
       var config = {
         arguments: [],
-        dataUrl: buildUrl + "/cc0df90c18f0826d22b46303557f29a6.data",
+        dataUrl: buildUrl + "/659cfb381577c33a0a612acee92b88fa.data",
         frameworkUrl: buildUrl + "/8a1cf41a1216679b9e688ebae2397a8a.framework.js",
         codeUrl: buildUrl + "/68e23c8c7790b4f89a2121f2a90566b0.wasm",
         streamingAssetsUrl: "StreamingAssets",
@@ -117,6 +117,7 @@
         createUnityInstance(canvas, config, (progress) => {
           document.querySelector("#unity-progress-bar-full").style.width = 100 * progress + "%";
               }).then((unityInstance) => {
+                window.unityInstance = unityInstance;
                 document.querySelector("#unity-loading-bar").style.display = "none";
                 document.querySelector("#unity-fullscreen-button").onclick = () => {
                   unityInstance.SetFullscreen(1);
